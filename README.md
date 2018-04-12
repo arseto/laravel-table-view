@@ -9,21 +9,21 @@ Installation
 
 Update your `composer.json` file to include this package as a dependency
 ```json
-"witty/laravel-table-view": "dev-master"
+"arseto/laravel-table-view": "dev-master"
 ```
 
 
 Register the TableView service provider by adding it to the providers array in the `config/app.php` file.
 ```php
 'providers' => array(
-    Witty\LaravelTableView\LaravelTableViewServiceProvider::class
+    Arseto\LaravelTableView\LaravelTableViewServiceProvider::class
 )
 ```
 
 If you want you can alias the TableView facade by adding it to the aliases array in the `config/app.php` file.
 ```php
 'aliases' => array(
-        'TableView' => Witty\LaravelTableView\Facades\TableView::class,
+        'TableView' => Arseto\LaravelTableView\Facades\TableView::class,
 )
 ```
 
@@ -226,7 +226,7 @@ Edit app/Http/Kernel.php, adding a reference to the Middleware
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
 
         // Laravel TableView Middleware
-        'table-view.storage' => \Witty\LaravelTableView\Middleware\TableViewCookieStorage::class,
+        'table-view.storage' => \Arseto\LaravelTableView\Middleware\TableViewCookieStorage::class,
     ];
 ```
 
